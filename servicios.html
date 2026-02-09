@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Nuestros Servicios - Soasin</title>
+	<meta name="description"
+		content="Servicios de limpieza integral para oficinas, empresas, edificios y hogar en Santiago. Personal capacitado y tecnología de punta.">
+
+	<!-- Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@400;500;600;700&display=swap"
+		rel="stylesheet">
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+	<link rel="stylesheet" href="css/styles_premium.css">
+
+	<!-- Custom Page Styles -->
+	<style>
+		.page-hero {
+			background: linear-gradient(135deg, var(--secondary-color), #1a252f);
+			color: white;
+			padding: 120px 0 100px;
+			text-align: center;
+			position: relative;
+			overflow: hidden;
+		}
+
+		.page-hero h1 {
+			color: white;
+			font-size: 3.5rem;
+			margin-bottom: 20px;
+		}
+
+		.page-hero p {
+			font-size: 1.2rem;
+			opacity: 0.9;
+			max-width: 600px;
+			margin: 0 auto;
+		}
+
+		.services-page-section {
+			padding: 80px 0;
+			background-color: var(--light-bg);
+			position: relative;
+			margin-top: -60px;
+			/* Overlap effect */
+			z-index: 10;
+		}
+
+		.service-card-full {
+			background: white;
+			border-radius: var(--radius);
+			overflow: hidden;
+			box-shadow: var(--shadow);
+			transition: var(--transition);
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+		}
+
+		.service-card-full:hover {
+			transform: translateY(-10px);
+			box-shadow: var(--shadow-lg);
+		}
+
+		.service-img-wrapper {
+			height: 200px;
+			overflow: hidden;
+			position: relative;
+		}
+
+		.service-img-wrapper img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			transition: transform 0.5s ease;
+		}
+
+		.service-card-full:hover .service-img-wrapper img {
+			transform: scale(1.1);
+		}
+
+		.service-body {
+			padding: 30px;
+			flex-grow: 1;
+			display: flex;
+			flex-direction: column;
+		}
+
+		.service-body h3 {
+			font-size: 1.3rem;
+			margin-bottom: 15px;
+			color: var(--secondary-color);
+		}
+
+		.service-body p {
+			color: #64748b;
+			font-size: 0.95rem;
+			margin-bottom: 20px;
+			flex-grow: 1;
+		}
+
+		.service-link {
+			color: var(--primary-color);
+			font-weight: 600;
+			text-transform: uppercase;
+			font-size: 0.9rem;
+			letter-spacing: 0.5px;
+			display: inline-flex;
+			align-items: center;
+			gap: 8px;
+		}
+
+		.service-link:hover {
+			gap: 12px;
+		}
+	</style>
+
+	<!-- Google Tag Manager -->
+	<script>(function (w, d, s, l, i) {
+			w[l] = w[l] || []; w[l].push({
+				'gtm.start':
+					new Date().getTime(), event: 'gtm.js'
+			}); var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+					'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+		})(window, document, 'script', 'dataLayer', 'GTM-PGSV9SP8');</script>
+	<!-- End Google Tag Manager -->
+</head>
+
+<body>
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PGSV9SP8" height="0" width="0"
+			style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+
+	<!-- Header & Navigation -->
+	<header>
+		<div class="container">
+			<nav class="main-nav">
+				<a href="index.html" class="logo">
+					<img src="img/logo.png" alt="Soasin Logo">
+				</a>
+				<div class="mobile-menu-btn" onclick="toggleMenu()">
+					<i class="fas fa-bars"></i>
+				</div>
+				<ul class="nav-links" id="navLinks">
+					<li><a href="index.html">Inicio</a></li>
+					<li><a href="nosotros.html">Nosotros</a></li>
+					<li><a href="servicios.html" style="color: var(--primary-color);">Servicios</a></li>
+
+					<li><a href="contacto.html">Contacto</a></li>
+					<li><a href="contacto.html" class="btn cta-btn">Cotizar</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<!-- Page Hero -->
+	<div class="page-hero">
+		<div class="container">
+			<h1>Nuestros Servicios</h1>
+			<p>Soluciones de limpieza profesional adaptadas a las necesidades específicas de tu empresa u hogar.</p>
+		</div>
+		<div class="wave-divider">
+			<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+				preserveAspectRatio="none">
+				<path
+					d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+					class="shape-fill"></path>
+			</svg>
+		</div>
+	</div>
+
+	<!-- Services Grid -->
+	<section class="services-page-section">
+		<div class="container">
+			<div class="services-grid">
+
+				<!-- Service 1: Oficinas -->
+				<div class="service-card-full">
+					<div class="service-img-wrapper">
+						<img src="img/2SB8ZgokYFr.jpg" alt="Limpieza de Oficinas">
+					</div>
+					<div class="service-body">
+						<h3>Limpieza de Oficinas</h3>
+						<p>Mantén tu espacio de trabajo impecable y productivo. Ofrecemos limpieza diaria, periódica y
+							profunda para oficinas de todos los tamaños.</p>
+						<a href="servicios/limpieza-oficinas.html" class="service-link">Ver Detalles <i
+								class="fas fa-arrow-right"></i></a>
+					</div>
+				</div>
+
+				<!-- Service 2: Educacional -->
+				<div class="service-card-full">
+					<div class="service-img-wrapper">
+						<img src="img/EBs7TrvdwzrQ.jpg" alt="Instituciones Educacionales">
+					</div>
+					<div class="service-body">
+						<h3>Instituciones Educacionales</h3>
+						<p>Entornos seguros y sanitizados para estudiantes y docentes. Protocolos especiales de higiene
+							para colegios y universidades.</p>
+						<a href="servicios/limpieza-instituciones-educacionales.html" class="service-link">Ver Detalles
+							<i class="fas fa-arrow-right"></i></a>
+					</div>
+				</div>
+
+				<!-- Service 3: Edificios Residenciales -->
+				<div class="service-card-full">
+					<div class="service-img-wrapper">
+						<img src="img/bglTEP3MGkZS.jpg" alt="Edificios Residenciales">
+					</div>
+					<div class="service-body">
+						<h3>Edificios Residenciales</h3>
+						<p>Cuidado integral de espacios comunes, halls, escaleras y áreas de recreación para la
+							comodidad de todos los residentes.</p>
+						<a href="servicios/limpieza-edificios-residenciales.html" class="service-link">Ver Detalles <i
+								class="fas fa-arrow-right"></i></a>
+					</div>
+				</div>
+
+				<!-- Service 4: Corporativos -->
+				<div class="service-card-full">
+					<div class="service-img-wrapper">
+						<img src="img/sVe9G5vOxhQN.jpg" alt="Edificios Corporativos">
+					</div>
+					<div class="service-body">
+						<h3>Edificios Corporativos</h3>
+						<p>Imagen profesional y espacios relucientes. Servicios especializados para grandes
+							corporaciones y complejos empresariales.</p>
+						<a href="servicios/limpieza-edificios-corporativos.html" class="service-link">Ver Detalles <i
+								class="fas fa-arrow-right"></i></a>
+					</div>
+				</div>
+
+				<!-- Service 5: Vidrios -->
+				<div class="service-card-full">
+					<div class="service-img-wrapper">
+						<img src="img/RLKnoEkJ28JV.jpg" alt="Limpieza de Vidrios">
+					</div>
+					<div class="service-body">
+						<h3>Limpieza de Vidrios</h3>
+						<p>Limpieza técnica de vidrios en altura y a nivel de piso. Resultados cristalinos y seguridad
+							garantizada.</p>
+						<a href="servicios/limpieza-vidrios.html" class="service-link">Ver Detalles <i
+								class="fas fa-arrow-right"></i></a>
+					</div>
+				</div>
+
+				<!-- Service 6: Alfombras -->
+				<div class="service-card-full">
+					<div class="service-img-wrapper">
+						<img src="img/BWFJUlPQcQAF.jpg" alt="Lavado de Alfombras">
+					</div>
+					<div class="service-body">
+						<h3>Lavado de Alfombras</h3>
+						<p>Recupera la vida de tus alfombras. Eliminación de manchas, ácaros y malos olores con
+							maquinaria industrial.</p>
+						<a href="servicios/lavado-de-alfombras.html" class="service-link">Ver Detalles <i
+								class="fas fa-arrow-right"></i></a>
+					</div>
+				</div>
+
+				<!-- Service 7: Sanitización -->
+				<div class="service-card-full">
+					<div class="service-img-wrapper">
+						<img src="img/qRuSbyJ3Nwwf.jpg" alt="Sanitización">
+					</div>
+					<div class="service-body">
+						<h3>Sanitización</h3>
+						<p>Desinfección profesional de ambientes para prevenir la propagación de virus y bacterias.
+							Espacios 100% seguros.</p>
+						<a href="https://empresadelimpieza.cl/servicios/sanitizacion" class="service-link">Ver Detalles
+							<i class="fas fa-arrow-right"></i></a>
+					</div>
+				</div>
+
+				<!-- Service 8: Hogar -->
+				<div class="service-card-full">
+					<div class="service-img-wrapper">
+						<img src="img/y8bkvBlz5raY.jpg" alt="Limpieza Hogar">
+					</div>
+					<div class="service-body">
+						<h3>Limpieza Hogar</h3>
+						<p>Servicio doméstico de confianza. Aseo profundo, post-mudanza o mantención regular para tu
+							casa o departamento.</p>
+						<a href="servicios/limpieza-hogar.html" class="service-link">Ver Detalles <i
+								class="fas fa-arrow-right"></i></a>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<!-- CTA Section -->
+	<section class="cta-section section-padding"
+		style="background: var(--secondary-color); color: white; text-align: center; position: relative; overflow: hidden;">
+		<div class="container" style="z-index: 2; position: relative;">
+			<h2 style="color: white; margin-bottom: 20px;">¿Necesitas un servicio a medida?</h2>
+			<p style="margin-bottom: 30px; font-size: 1.2rem; opacity: 0.9;">Contáctanos para evaluar tu proyecto y
+				ofrecerte la mejor solución de limpieza.</p>
+			<a href="contacto.html" class="btn"
+				style="background: var(--primary-color); color: white; padding: 18px 45px; font-size: 1.1rem;">Solicitar
+				Presupuesto</a>
+		</div>
+	</section>
+
+	<!-- Footer -->
+	<footer>
+		<div class="container">
+			<div class="footer-grid">
+				<div class="footer-col" style="max-width: 300px;">
+					<img src="img/logo.png" alt="Soasin"
+						style="width: 150px; margin-bottom: 20px; filter: brightness(0) invert(1);">
+					<p>Expertos en limpieza profesional. Transformamos tus espacios con dedicación y tecnología.</p>
+				</div>
+				<div class="footer-col">
+					<h3>Enlaces Rápidos</h3>
+					<ul>
+						<li><a href="index.html">Inicio</a></li>
+						<li><a href="nosotros.html">Nosotros</a></li>
+						<li><a href="servicios.html">Servicios</a></li>
+
+						<li><a href="contacto.html">Contacto</a></li>
+					</ul>
+				</div>
+				<div class="footer-col footer-contact">
+					<h3>Contacto</h3>
+					<ul>
+						<li><i class="fas fa-map-marker-alt" style="color: var(--primary-color);"></i> Doctor Sotero del
+							Rio 508 of. 634</li>
+						<li><i class="fas fa-envelope" style="color: var(--primary-color);"></i>
+							contacto@empresadelimpieza.cl</li>
+						<li><i class="fas fa-phone" style="color: var(--primary-color);"></i> +562 3254 2000</li>
+						<li><i class="fab fa-whatsapp" style="color: var(--primary-color);"></i> +569 5627 1216</li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer-bottom">
+				<p>&copy; 2026 Soasin. Todos los derechos reservados.</p>
+			</div>
+		</div>
+	</footer>
+
+	<!-- WhatsApp Float -->
+	<a href="https://api.whatsapp.com/send?phone=56956271216" class="whatsapp-float" target="_blank">
+		<i class="fab fa-whatsapp"></i>
+	</a>
+
+	<!-- Scripts -->
+	<script src="js/interactions.js"></script>
+	<script>
+		function toggleMenu() {
+			var nav = document.getElementById('navLinks');
+			if (nav.style.display === 'flex') {
+				nav.style.display = 'none';
+			} else {
+				nav.style.display = 'flex';
+				nav.style.flexDirection = 'column';
+				nav.style.position = 'absolute';
+				nav.style.top = '70px';
+				nav.style.left = '0';
+				nav.style.width = '100%';
+				nav.style.backgroundColor = 'white';
+				nav.style.padding = '20px';
+				nav.style.boxShadow = '0 5px 10px rgba(0,0,0,0.1)';
+				nav.style.zIndex = '1000';
+			}
+		}
+	</script>
+</body>
+
+</html>
