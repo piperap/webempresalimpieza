@@ -738,7 +738,8 @@ footer {
 .whatsapp-float {
     position: fixed;
     bottom: 30px;
-    right: 30px;
+    left: 30px;
+    /* Moved to left to avoid conflict */
     width: 60px;
     height: 60px;
     background-color: #25d366;
@@ -747,7 +748,8 @@ footer {
     text-align: center;
     font-size: 30px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    z-index: 1000;
+    z-index: 2147483647;
+    /* Max z-index */
     display: flex;
     align-items: center;
     justify-content: center;
